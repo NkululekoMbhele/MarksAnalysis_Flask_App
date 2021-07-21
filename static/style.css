@@ -1,0 +1,88 @@
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+}
+
+.header img {
+    width: 400px;
+    height: auto;
+    margin: 30px auto;
+}
+
+.header p {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.upload-section {
+    width: 400px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.upload-section>h5 {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+.upload-section form {
+    display: flex;
+}
+
+.upload-box {
+    width: 250px;
+    height: 2rem;
+    border: 1px solid #151515;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgba(245, 245, 255, 0.788);
+}
+
+.upload-box input {
+    margin-left: 10px;
+}
+
+#inputName,
+#inputName:focus {
+    border: none;
+    outline: none;
+    width: 100px;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.upload-section>form>.btn-upload {
+    background-color: #9c2aff;
+    border: none;
+    margin-left: 20px;
+    width: 6rem;
+    border-radius: 8px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.file-upload-label {
+    width: 250px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}

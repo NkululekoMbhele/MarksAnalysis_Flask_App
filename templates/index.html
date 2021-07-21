@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <title>Marks Analysis App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <img src="{{url_for('static', filename='logo.png')}}" alt="image" />
+            <p>
+                Marks Analysis is here to analysing the performance of your students for you.
+            </p>
+        </div>
+        <div class="upload-section">
+            <h5>Upload CSV file:</h5>
+            <form name="fileForm" action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="upload-box">
+                    <input type="file" name="csvFile" id="csv" />
+                </div>
+                <input class="btn-upload" type="submit" value="upload" />
+            </form>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>
