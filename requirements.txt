@@ -1,4 +1,4 @@
 Flask
 pandas
-matlibplot
+matplotlib
 werkzeug

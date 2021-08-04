@@ -5,15 +5,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='analysis.css')}}" />
     <title>Analysis - Result</title>
 </head>
 
 <body>
-    <ul>
-        {% for i in range(0, 5) %}
-        <li>{{name}}</li>
-        {% endfor %}
-    </ul>
-</body>
+    <div class="container">
+        <div class="row header">
+            <img src="{{url_for('static', filename='logo.png')}}" alt="image" />
+            <h4>
+                Marks Analysis for {{filename}}
+            </h4>
+        </div>
+        <div class="results">
+            <div class="file-content">
+                <h4>File Content</h4>
+                <div class="inside">
+                    <p>The file consist of {{basicStat['colNumber']}} columns and {{basicStat["rowNumber"]}} rows</p>
+                    <table>
+                        <tr>
+                            <td>Columns </td>
+                            <td>
+                                <ul>
+                                    {%for i in basicStat['colsNames']%}
+                                    <li>{{i}}</li>
+                                    {%endfor%}
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="basic-stat">
+                <h4>Basic Statistic for {{basicStat['colsNames'][-1]}}</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Average mark</td>
+                                    <td>{{basicStat['average']}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Median mark</td>
+                                    <td>{{basicStat['median']}}</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Lowest mark</td>
+                                    <td>{{basicStat['minMark']}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Highest mark</td>
+                                    <td>{{basicStat['maxMark']}}</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Marks less than 50</td>
+                                    <td>{{ basicStat['passedNumber'] }}</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Marks greater than 50</td>
+                                    <td>{{ basicStat['failedNumber']}}</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="distribution">
+                <h4>Mark Distribution</h4>
+            </div>
+        </div>
+
+        <body>
+
+        </body>
 
 </html>
