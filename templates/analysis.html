@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <div class="row header">
+        <div class="header">
             <img src="{{url_for('static', filename='logo.png')}}" alt="image" />
             <h4>
                 Marks Analysis for {{filename}}
@@ -21,7 +21,7 @@
             <div class="file-content">
                 <h4>File Content</h4>
                 <div class="inside">
-                    <p>The file consist of {{basicStat['colNumber']}} columns and {{basicStat["rowNumber"]}} rows</p>
+                    <p>The file consist of <span> {{basicStat['colNumber']}}</span> columns and <span>{{basicStat["rowNumber"]}} </span> rows</p>
                     <table>
                         <tr>
                             <td>Columns </td>
@@ -38,11 +38,11 @@
             </div>
             <div class="basic-stat">
                 <h4>Basic Statistic for {{basicStat['colsNames'][-1]}}</h4>
-                <table>
+                <table class="table">
                     <tr>
                         <td>
                             <table>
-                                <tr>
+                                <tr class="row">
                                     <td>Average mark</td>
                                     <td>{{basicStat['average']}}</td>
                                 </tr>
@@ -50,7 +50,7 @@
                         </td>
                         <td>
                             <table>
-                                <tr>
+                                <tr class="row">
                                     <td>Median mark</td>
                                     <td>{{basicStat['median']}}</td>
                                 </tr>
@@ -61,7 +61,7 @@
                     <tr>
                         <td>
                             <table>
-                                <tr>
+                                <tr class="row">
                                     <td>Lowest mark</td>
                                     <td>{{basicStat['minMark']}}</td>
                                 </tr>
@@ -69,7 +69,7 @@
                         </td>
                         <td>
                             <table>
-                                <tr>
+                                <tr class="row">
                                     <td>Highest mark</td>
                                     <td>{{basicStat['maxMark']}}</td>
                                 </tr>
@@ -80,7 +80,7 @@
                     <tr>
                         <td>
                             <table>
-                                <tr>
+                                <tr class="row">
                                     <td>Marks less than 50</td>
                                     <td>{{ basicStat['passedNumber'] }}</td>
                                 </tr>
@@ -88,7 +88,7 @@
                         </td>
                         <td>
                             <table>
-                                <tr>
+                                <tr class="row">
                                     <td>Marks greater than 50</td>
                                     <td>{{ basicStat['failedNumber']}}</td>
                                 </tr>
@@ -98,9 +98,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="distribution">
+            <!-- <div class="distribution">
                 <h4>Mark Distribution</h4>
-            </div>
+            </div> -->
         </div>
 
         <body>

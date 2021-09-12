@@ -26,3 +26,21 @@ body {
     font-weight: 100;
     font-size: 20px;
 }
+
+.inside p span {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.row td:nth-child(2) {
+    font-weight: bold;
+}
+
+.basic-stat .table {
+    width: 500px;
+}
